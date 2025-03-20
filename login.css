@@ -1,0 +1,504 @@
+@font-face {
+    font-family: metropolis-blackitalic;
+    src: url(fonts/metropolis.black-italic.otf);
+}
+@font-face {
+    font-family: metropolis-black;
+    src: url(fonts/metropolis.black.otf);
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(fonts/metropolis.light.otf);
+}
+@font-face {
+    font-family: metropolis-extrabold;
+    src: url(fonts/metropolis.extra-bold.otf);
+}
+@font-face {
+    font-family: metropolis-reg;
+    src: url(fonts/metropolis.regular.otf);
+}
+@font-face {
+    font-family: metropolis-semi;
+    src: url(fonts/metropolis.semi-bold.otf);
+}
+@font-face {
+    font-family: metropolis-regitalic;
+    src: url(fonts/metropolis.regular-italic.otf);
+}
+/* Section Styling */
+#login-section {
+    height: 100vh; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    overflow: hidden;
+}
+
+/* Container Styling */
+#login-container {
+    background-image: url(images/signin-bg.svg);
+    background-size: cover;
+    max-width: 100%; 
+    padding: 0 1rem; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    height: 100%; 
+    
+}
+
+/* Item Container Styling */
+#item-container {
+    padding: 1rem; 
+    margin:10rem;
+    border-radius: 10px; 
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; 
+    max-width: 400px; 
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 0.5rem; 
+}
+
+#umak-logo {
+    max-width: 100%; 
+    height: 13vh; 
+}
+
+#title-header{
+    color:aliceblue;
+    font-family: metropolis-extrabold;
+    font-size: 3.2rem;
+    text-align: center;
+    padding:1rem 0;
+}
+
+/* Form Inputs and Buttons */
+.form-outline.mb-3 {
+    position: relative;
+    color:aliceblue;
+
+}
+
+/* Input Container Styling */
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Input Field Styling */
+.form-control.form-control-lg {
+    color:aliceblue;
+    width: 100%;
+    padding: 1rem 3rem 0.5rem 1rem; /* Increased top padding for the label */
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Label Styling */
+.form-label {
+    position: absolute;
+    top: 50%; 
+    left: 1rem; 
+    transform: translateY(-50%); 
+    color: #adb5bd; 
+    font-size: 1rem;
+    pointer-events: none; 
+    transition: all 0.3s ease; 
+}
+
+/* Focused Input Field */
+.form-control.form-control-lg:focus {
+    color: aliceblue;
+    background-color:transparent;
+    border: 1px solid #F2EC26;
+
+}
+
+/* Floating Label Effect */
+.form-control.form-control-lg:focus + .form-label,
+.form-label.active {
+    top: -0.1rem; 
+    left: 1rem; 
+    font-size: 0.8rem; 
+    background-color:#01015F;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 0;
+    border: 1px hidden #F2EC26;
+    z-index:2000;
+    color: #F2EC26; 
+}
+
+/* Icon Styling */
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #adb5bd;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.fa-solid.fa-eye.input-icon{
+    cursor: pointer;
+}
+.fa-solid.fa-eye.input-icon:hover {
+    color: #F2EC26;
+}
+
+/* Checkbox and Forgot Password Link */
+#third-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem; 
+}
+#fourth-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+#btn-forgotpass, #lbl-retain{
+    color:aliceblue;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: metropolis-light;
+}
+
+#btn-forgotpass:hover {
+    color:#F2EC26;
+}
+
+#btn-forgotpass i {
+    color: aliceblue;
+    padding: 0.2rem;
+    font-size:1rem;
+    transition: color 0.3s ease;
+}
+
+#btn-forgotpass:hover i {
+    color: #F2EC26; 
+}
+
+#check-retain{
+    background-color: transparent;
+    border: 0.5px solid aliceblue;
+}
+
+/* Login Button */
+#btn-login {
+    background-color: #F2EC26;
+    border: none;
+    color: #020047; 
+    padding: 0.65rem 2rem;
+    font-size: 1rem;
+    border-radius:10px;
+    width: 80%;
+    margin:0 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btn-login:hover {
+    background-color: #020047;
+    border: 0.5px solid #F2EC26;
+    color: #ffffff;
+    transform: scale(1.05); 
+}
+
+/* Signup Text */
+.lbl-signup {
+    font-size: 0.9rem;
+    color: #ffffff; 
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#btn-signup {
+    color: #F2EC26;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#btn-signup:hover {
+    color: #ffffff; 
+}
+#btn-terms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+#lbl-terms{
+    color:rgba(240, 248, 255, 0.477);
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: metropolis-light;
+}
+
+#check-terms{
+    background-color: transparent;
+    border: 0.5px solid rgba(240, 248, 255, 0.525);
+    font-size: 0.8rem;
+}
+
+#terms-link{
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+/* Footer Styling */
+.copyright-container {
+    color: aliceblue;
+    font-size: 0.8rem;
+    font-family: metropolis-reg;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    background-color: #020047;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.copyright-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    /* Terms and Conditions Checkbox */
+    #btn-terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    #lbl-terms {
+        color: rgba(240, 248, 255, 0.477);
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: metropolis-light;
+        width: 100%;
+    }
+
+    #check-terms {
+        background-color: transparent;
+        border: 0.5px solid rgba(240, 248, 255, 0.525);
+        font-size: 0.75rem;
+    }
+
+    #terms-link {
+        color: #adb5bd;
+        text-decoration: none;
+    }
+
+    /* Container Styling */
+    #login-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Parent Container */
+    #login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    /* Child Container */
+    #item-container {
+        background-color: transparent;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Logo Styling */
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    #umak-logo {
+        max-width: 100%;
+        padding: 0.5rem 0;
+        height: 13vh;
+    }
+
+    /* Input Styling */
+    .form-control.form-control-lg {
+        width: 18rem;
+        padding: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+        border: 1px solid aliceblue;
+        background-color: transparent;
+        border-radius: 10px;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Signup Link Styling */
+    .lbl-signup {
+        font-size: 0.8rem;
+        color: #ffffff;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    /* Checkbox and Link Styling */
+    .form-check-label,
+    a.text-body {
+        font-size: 0.9rem;
+    }
+
+    /* Login Button Styling */
+    #btn-login {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    /* Forgot Password and Remember Me Styling */
+    #btn-forgotpass,
+    #lbl-retain {
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    /* Center the layout */
+    #login-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #item-container {
+        margin: 0; /* Remove extra margin */
+        padding: 1.5rem; /* Adjust padding */
+        width: 90%; /* Ensure it fits smaller screens */
+        max-width: 400px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Terms and Conditions Checkbox */
+    #btn-terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+    }
+
+    #lbl-terms {
+        color: rgba(240, 248, 255, 0.477);
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: metropolis-light;
+    }
+
+    #check-terms {
+        background-color: transparent;
+        border: 0.5px solid rgba(240, 248, 255, 0.525);
+        font-size: 0.55rem;
+    }
+
+    #terms-link {
+        color: #adb5bd;
+        text-decoration: none;
+    }
+
+    /* Item Container Styling */
+    #item-container {
+        padding: 1rem;
+        margin: 3rem;
+        width: fit-content;
+        max-width: 400px;
+    }
+
+    /* Input Styling */
+    .form-control.form-control-lg {
+        width: 18rem;
+        padding: 1rem;
+        height: 3rem;
+        font-size: 1rem;
+        border: 1px solid aliceblue;
+        background-color: transparent;
+        border-radius: 10px;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Checkbox and Link Styling */
+    .form-check-label,
+    a.text-body {
+        font-size: 0.7rem;
+    }
+
+    /* Signup Link Styling */
+    .lbl-signup {
+        font-size: 0.8rem;
+        color: #ffffff;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    /* Login Button Styling */
+    #btn-login {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    /* Forgot Password and Remember Me Styling */
+    #btn-forgotpass,
+    #lbl-retain {
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+}
