@@ -1,0 +1,399 @@
+@font-face {
+    font-family: metropolis-blackitalic;
+    src: url(fonts/metropolis.black-italic.otf);
+}
+@font-face {
+    font-family: metropolis-black;
+    src: url(fonts/metropolis.black.otf);
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(fonts/metropolis.light.otf);
+}
+@font-face {
+    font-family: metropolis-extrabold;
+    src: url(fonts/metropolis.extra-bold.otf);
+}
+@font-face {
+    font-family: metropolis-reg;
+    src: url(fonts/metropolis.regular.otf);
+}
+@font-face {
+    font-family: metropolis-semi;
+    src: url(fonts/metropolis.semi-bold.otf);
+}
+@font-face {
+    font-family: metropolis-regitalic;
+    src: url(fonts/metropolis.regular-italic.otf);
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Use transform for scaling */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Use transform for scaling */
+    }
+}
+
+.block {
+    opacity: 0; /* Start invisible */
+    transform: scale(0.5); /* Start scaled down */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.block.visible {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+}
+
+/* Section Styling */
+#landingpage-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(images/landing-page-bgnotext.svg); /* Default background */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 2em 5em;
+    padding: 1em;
+    z-index: 1000;
+}
+
+#navbar .nav-link {
+    color: aliceblue;
+    text-decoration: none;
+    padding-left:40px;
+    padding-right:40px;
+    margin: 0 1em;
+    font-family: metropolis-reg;
+    transition: color 0.3s ease-in-out, font-family 0.3s ease-in-out, transform 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+#navbar .nav-link:hover {
+    color: #F2EC26;
+    background-color: #020047a7;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius: 20px;
+    font-family: metropolis-semi;
+    transform: scale(1.1);
+    background-size: 100% 2px; 
+}
+
+
+#logo img {
+    max-width: 100%;
+    height: 5%;
+    padding-top:0em;
+    padding-bottom:2em;
+}
+
+#text-body {
+    width: 100%; /* Set a width for the container */
+    height: auto; /* Adjust height as needed */
+}
+
+#text-content {
+    max-width: 100%;
+    color: white;
+    margin: 1rem 0rem;
+    position: relative;
+    align-self: center;
+    align-content: center;
+}
+
+#additional-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+#lp-subheader {
+    color: aliceblue;
+    font-family: metropolis-semi;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+#lp-description {
+    color: aliceblue;
+    font-family: metropolis-light;
+    font-size: 0.9rem;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+#key-facts{
+    padding:1rem 1rem;
+    background-color: #020047;
+    height: fit-content;
+    width: 100%;
+}
+
+#facts-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+#lbl-keyfacts-container,#attendees-container,#events-container,#venues-container{
+    padding:5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#attendees-container,#events-container{
+    border-right:5px solid aliceblue;
+    height:20vh;
+}
+
+#lbl-venues,#lbl-events,#lbl-attendees{
+    font-size: 1rem;
+    font-family:metropolis-light;
+}
+#count-venues,#count-events,#count-attendees{
+    font-size: 3rem;
+    font-family:metropolis-bold;
+}
+
+
+#lbl-keyfacts{
+    font-family: metropolis-bold;
+    font-size: 3rem;
+}
+/* Footer Styling */
+.copyright-container {
+    color: aliceblue;
+    font-size: 0.8rem;
+    font-family: metropolis-reg;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #020047;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Switch to landing-page-bg.svg when the screen is full height */
+@media (min-height: 100vh) and (min-width: 1350px) {
+    #landingpage-section {
+        background-image: url(images/landing-page-bg.svg);
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 968px) {
+    #facts-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width:50%;        
+    }
+
+    #navbar{
+        position: absolute;
+        padding:0;
+        margin-top:3rem;
+        margin-right:0.7rem;
+    }
+    
+    #lbl-keyfacts-container,#attendees-container,#events-container,#venues-container{
+        padding:4em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #landingpage-section {
+        background-image: url(images/landing-page-bgnotext.svg);
+        background-size:cover;
+        background-position: center;
+    }
+
+    #navbar {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0em;
+        z-index: 1000;
+    }
+
+    #navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    
+    #lp-description {
+        width: 100%;
+        font-size: 0.9rem;
+        padding:0rem 1rem;
+    }
+
+    #lp-subheader {
+        color: aliceblue;
+        font-family: metropolis-bold;
+        font-size: 1.5rem;
+    }
+
+    #text-content {
+        height: 20vh;
+        padding:0rem 1rem;
+    }
+
+    #text-body {
+        width: 100%; 
+        height: auto; 
+    }
+    
+    #facts-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:50%;        
+    }
+    
+    #lbl-keyfacts-container,#attendees-container,#events-container,#venues-container{
+        padding:3em;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #lbl-keyfacts{
+        font-size: 3rem;
+        margin-top: 1em;
+    }
+
+    
+    #attendees-container,#events-container{
+        border-right:none;
+        border-bottom: 5px solid aliceblue;
+        width: 10%;
+    }
+    
+}
+
+@media only screen and (max-width: 576px) {
+    
+    #landingpage-section {
+        background-image: url(images/landing-page-bgnotext.svg);
+        background-size:cover;
+        background-position: center;
+    }
+    
+    #additional-details{
+        width: 100%;
+    }
+    
+    #lp-subheader {
+        color: aliceblue;
+        font-family: metropolis-bold;
+        font-size: 1.5rem;
+    }
+    
+    #lp-description {
+        width: 100%;
+        font-size: 0.9rem;
+        padding:0rem 1rem;
+    }
+
+    #text-content {
+        height: 20vh;
+        padding:0rem 1rem;
+    }
+
+    #navbar {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0em;
+        z-index: 1000;
+    }
+
+    #navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    #text-body {
+        width: 100%;
+        height: auto; 
+    }
+    
+    #facts-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+    }
+    
+    #lbl-keyfacts-container,#attendees-container,#events-container,#venues-container{
+        padding:3em;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #lbl-keyfacts{
+        font-size: 3rem;
+        margin-top: 1em;
+    }
+    #attendees-container,#events-container{
+        border-right:none;
+        border-bottom: 5px solid aliceblue;
+        width: 10%;
+    }
+
+    .copyright-container {
+        font-size: 0.7rem;
+    }
+}
