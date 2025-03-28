@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="icon" href="images/web-logo.svg" type="image/svg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">    
+
+    <!-- Bootstrap JavaScript (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section id="faqs-container">
+        <div id="faqs-inner-container">
+            <!-- COLUMN 1 -->
+            <div id="faqs-textcontent-container">
+                <div id="faqs-textcontent-headers">
+                    <h5 id="faqs-questions-header">Any Questions ?</h5>
+                    <h5 id="faqs-questions-subheader">We've got answers</h5>
+                </div>
+                
+                <div id="faqs-textcontent-body">
+                    <p id="faqs-textcontent-paragraph">
+                        Here, you'll find answers to common questions about our services, features, and policies. Whether you're new to our platform or a returning user, we aim to provide clear and concise information to help you make the most of your experience.
+                    </p>
+                </div>
+                
+                <div id="faqs-textcontent-inquiry">
+                    <p id="faqs-inquiry-paragraph">
+                        You can inquire here if you have other specific related concerns
+                    </p>
+                    <a href="#inquiry-container" id="btn-inquire-shortcut">Inquire Now <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <!-- COLUMN 2 -->
+             <div id="faqs-accordion-container">
+                    <!-- ACCORDION TEMPLATE -->
+                    <div class="accordion accordion-flush" id="accordion-container">
+                        <!-- Progress Item 1 -->
+                        <div class="progress-item1">
+                            <h2 class="item-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                    How to reserve a seat?
+                                </button>
+                            </h2>
+    
+                            <!-- Progress Item Body 1 -->
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion-container">
+                                <div class="item-body">
+                                    <h2 id="step-head">Seat Reservation</h2>
+                                    <h4 id="step-desc">To book a seat, start by selecting your preferred event from the main dashboard. 
+                                        Once you've chosen the event, you can proceed to reserve a seat using the provided seat chart by clicking 'reserve.' Please note that the system allows only one reservation per person, meaning each seat is linked to a single account. 
+                                        Be sure to choose your ideal spot!
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Progress Item 2 -->
+                        <div class="progress-item2">
+                            <h2 class="item-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Why can't I reserve other seats?
+                                </button>
+                            </h2>
+    
+                            <!-- Progress Item Body 2 -->
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                <div class="item-body">
+                                    <h2 id="step-head">Already reserved?</h2>
+                                    <h4 id="step-desc">The system policy allows each account to reserve only one seat per event. 
+                                        If you encounter an issue, it may be related to your previous reservations. 
+                                        You can check your account to see if a reservation has already been made for the event.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Progress Item 3 -->
+                        <div class="progress-item3">
+                            <h2 class="item-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    How do I pay my balance?
+                                </button>
+                            </h2>
+    
+                            <!-- Progress Item Body 3 -->
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                <div class="item-body">
+                                    <h2 id="step-head">Attending a paid event?</h2>
+                                    <h4 id="step-desc">Simply follow these steps for payment:<br>
+                                        Reserve a seat -> Timer Starts<br>
+                                        After making a reservation, a timer will begin for the payment deadline. 
+                                        You are required to pay within the specified time-frame. 
+                                        If the payment is not completed, the seat will only be partially held and may be released.
+                                        
+                                        <br>Pay upfront -> Cashier will verify 
+                                        -> Get the OTP code -> Enter the OTP code <br>
+                                        After entering the OTP code, the seat will be completely reserved and your ticket will be sent in your email
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Progress Item 4 -->
+                        <div class="progress-item4">
+                            <h2 class="item-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Forgot your password?
+                                </button>
+                            </h2>
+    
+                            <!-- Progress Item Body 4 -->
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+                                <div class="item-body">
+                                    <h2 id="step-head">Password Reset</h2>
+                                    <h4 id="step-desc">
+                                        Logout -> Click the 'forgot password' option in login.
+                                        You will be prompted to answer some security questions to be able to create a new password
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END ACCORDION TEMPLATE -->
+                </div>
+        </div>
+    </section>
+    <section id="inquiry-container">
+        <div id="inquiry-inner-container">
+            <div id="form-content">
+                <h5 id="inquiry-form-header">Send us your concerns</h5>
+                <h5 id="inquiry-form-subheader">Help us change for the better with your feedbacks</h5>
+                <form method="POST" action="">
+                    <div id="inquiry-fullname">
+                        <div class="input-container">
+                            <label class="form-label" for="fname-input">First Name</label>
+                            <input type="text" id="fname-input" class="form-control form-control-lg" placeholder="Juan"/>
+                        </div>
+                        <div class="input-container">
+                            <label class="form-label" for="lname-input">Surname</label>
+                            <input type="text" id="lname-input" class="form-control form-control-lg" placeholder="Dela cruz"/>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label class="form-label" for="email-input">Email Address</label>
+                        <input type="email" id="email-input" class="form-control form-control-lg" placeholder="example@gmail.com"/>
+                    </div>
+                    <div id="input-container">
+                        <label class="form-label" for="subject-type" id="lbl-subject">Subject</label><br>
+                        <select name="subject-type" id="subject-type" placeholder="Subject">
+                            <option value="reservation" class="form-control form-control-lg" id="subject-item">Seat Reservation</option>
+                            <option value="payment" class="form-control form-control-lg" id="subject-item">Payment</option>
+                            <option value="payment" class="form-control form-control-lg" id="subject-item">Password Change</option>
+                            <option value="payment" class="form-control form-control-lg" id="subject-item">Cancellation</option>
+                            <option value="ticket" class="form-control form-control-lg" id="subject-item">Ticket Generation</option>
+                            <option value="ticket" class="form-control form-control-lg" id="subject-item">Others</option>
+                        </select>
+                    </div>
+                            <div class="input-container">
+                                <label class="form-label" for="message-input">Message</label>
+                                <input type="text" id="message-input" class="form-control form-control-lg" placeholder="My concern is..."/>
+                    </div>
+
+                    <div id="form-bottom">
+                        <a href="#faqs-container" id="btn-faqs-shortcut">FAQs <i class="fa-solid fa-arrow-up"></i></a>
+                        <input type="submit" name="submit" id="btn-submit" value="Send message">
+                    </div>
+                </form>
+            </div>
+
+            <div id="contact-content">
+                <h5 id="contact-desc">Get In Touch</h5>
+
+                <div id="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div id="contact-textcontent">
+                        <h5 id="contact-header">Landline</h5>
+                        <h5 id="contact-info">2 888 20678</h5>
+                    </div>
+                </div>
+
+                <div id="contact-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <div id="contact-textcontent">
+                        <h5 id="contact-header">UFMO Website</h5>
+                        <a id="contact-info" href="https://www.umak.edu.ph/about/offices/ufmo/">https://www.umak.edu.ph/about/offices/ufmo/</a>
+                    </div>
+                </div>
+
+                <div id="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div id="contact-textcontent">
+                        <h5 id="contact-header">UFMO Email</h5>
+                        <h5 id="contact-info">ufmo@umak.edu.ph</h5>
+                    </div>
+                </div>
+
+                <div id="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                        <div id="contact-textcontent">
+                            <h5 id="contact-header">Facebook</h5>
+                            <h5 id="contact-info">https://www.facebook.com/UMakFacilities</h5>
+                        </div>
+                </div>
+            </div>
+            <img src="images/chair-overlay.svg" id="chair-overlay">
+        </div>
+
+        <section id="location-content">
+            <div id="location-inner-container">
+
+                <div id="location-content">
+                    <div id="location-postal">
+                        <h5 id="location-postal-header">Postal Address</h5>
+                        <h5 id="location-postal-info">JP Rizal Extension, West Rembo, 1644, City of Taguig</h5>
+                    </div>
+                    <div id="location-campus">
+                        <h5 id="location-campus-header">Campus Location</h5>
+                        <h5 id="location-campus-info">Ground Floor, Academic Building I, University of Makati Campus</h5>
+                    </div>
+                </div>
+
+                <div id="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.626338868038!2d121.05396377457225!3d14.563347977988721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c860ad20d9e9%3A0xeeb71061020f655a!2sUniversity%20of%20Makati!5e0!3m2!1sen!2sph!4v1742843018068!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+                </div>
+        </section>
+    </section>
+</body>    
+</html>

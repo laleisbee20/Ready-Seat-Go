@@ -7,14 +7,6 @@
     src: url(fonts/metropolis.black.otf);
 }
 @font-face {
-    font-family: metropolis-bold;
-    src: url(fonts/metropolis.bold.otf);
-}
-@font-face {
-    font-family: metropolis-light;
-    src: url(fonts/metropolis.light.otf);
-}
-@font-face {
     font-family: metropolis-extrabold;
     src: url(fonts/metropolis.extra-bold.otf);
 }
@@ -25,6 +17,14 @@
 @font-face {
     font-family: metropolis-semi;
     src: url(fonts/metropolis.semi-bold.otf);
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(fonts/metropolis.light.otf);
 }
 @font-face {
     font-family: metropolis-regitalic;
@@ -41,7 +41,7 @@
 
 /* Container Styling */
 #login-container {
-    background-image: url(images/signin-bg.svg);
+    background-image: url(images/signin-bg-w-overlay.svg);
     background-size: cover;
     max-width: 100%; 
     padding: 0 1rem; 
@@ -54,8 +54,9 @@
 
 /* Item Container Styling */
 #item-container {
-    padding: 1rem; 
-    margin:10rem;
+    padding: 1em; 
+    margin:10em;
+    margin-right: 18em;
     border-radius: 10px; 
     background-color: transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -100,7 +101,7 @@
 .form-control.form-control-lg {
     color:aliceblue;
     width: 100%;
-    padding: 1rem 3rem 0.5rem 1rem; /* Increased top padding for the label */
+    padding: 1rem 3rem 0.5rem 1rem; 
     font-size: 1rem;
     border-radius: 5px;
     background-color:transparent;
@@ -150,7 +151,7 @@
     transform: translateY(-50%);
     color: #adb5bd;
     font-size: 1rem;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease; 
 }
 
 .fa-solid.fa-eye.input-icon{
@@ -218,8 +219,7 @@
 }
 
 #btn-login:hover {
-    background-color: #020047;
-    border: 0.5px solid #F2EC26;
+    background-color: #007bff;
     color: #ffffff;
     transform: scale(1.05); 
 }
@@ -288,7 +288,6 @@
 }
 
 /* Responsive Design */
-
 @media only screen and (max-width: 768px) {
     /* Terms and Conditions Checkbox */
     #btn-terms {
@@ -328,6 +327,7 @@
 
     /* Parent Container */
     #login-container {
+        background-image: url(images/signin-bg.svg);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -399,6 +399,7 @@
         font-size: 0.8rem;
         text-decoration: none;
     }
+
 }
 
 @media only screen and (max-width: 675px) {
@@ -410,6 +411,7 @@
     }
 
     #login-container {
+        background-image: url(images/signin-bg.svg);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -417,9 +419,9 @@
     }
 
     #item-container {
-        margin: 0; /* Remove extra margin */
-        padding: 1.5rem; /* Adjust padding */
-        width: 90%; /* Ensure it fits smaller screens */
+        margin: 0; 
+        padding: 1.5rem;
+        width: 90%; 
         max-width: 400px; 
         display: flex;
         flex-direction: column;
@@ -428,6 +430,9 @@
 }
 
 @media only screen and (max-width: 576px) {
+    #login-container{
+        background-image: url(images/signin-bg.svg);
+    }
     /* Terms and Conditions Checkbox */
     #btn-terms {
         display: flex;

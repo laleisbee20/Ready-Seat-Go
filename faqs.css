@@ -1,0 +1,457 @@
+@font-face {
+    font-family: metropolis-black;
+    src: url(fonts/metropolis.black.otf);
+}
+@font-face {
+    font-family: metropolis-extrabold;
+    src: url(fonts/metropolis.extra-bold.otf);
+}
+@font-face {
+    font-family: metropolis-semi;
+    src: url(fonts/metropolis.semi-bold.otf);
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+    font-family: metropolis-reg;
+    src: url(fonts/metropolis.regular.otf);
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(fonts/metropolis.light.otf);
+}
+#faqs-container{
+    /* background-image: url(images/faqs-questions-bg.svg); */
+}
+
+#location-inner-container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    border-top: 1px solid #020047ab;
+}
+
+#location-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    gap:5em;
+    padding:5em 0 5em;
+}
+#location-postal,#location-campus{
+    text-align: center;
+    color:#020047;
+    width: 20%;
+}
+#location-campus-header,
+#location-postal-header{
+    font-family: metropolis-bold;
+    font-size:1rem;
+}
+#location-campus-info,
+#location-postal-info{
+    font-family: metropolis-light;
+    font-size:0.9rem;
+    margin-top:2em;
+}
+
+#location-map{
+    padding:0;
+}
+iframe{
+    width:100%;
+    height: 75vh;
+}
+
+#faqs-accordion-container,
+#faqs-textcontent-container,
+#form-content,
+#contact-content{
+    flex:1 !important;
+    width:100%;
+    padding:1em;
+}
+#faqs-inner-container,
+#inquiry-inner-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height:100vh;
+        margin:0 auto;
+        gap:1em;
+        padding-left:6em;
+        padding-right:5em;    
+}
+#faqs-textcontent-headers{
+    margin-bottom:1.2em;
+    display: flex;
+    flex-direction: column;
+}
+#faqs-questions-header{
+    color:#020047;
+    font-family:metropolis-extrabold;
+    font-size: 3em;
+    letter-spacing: -0.03em;
+    margin-bottom: -0.1em
+}
+#faqs-questions-subheader{
+    color:#818181;
+    font-family:metropolis-semi;
+    font-size: 2.7em;
+    letter-spacing: -0.03em;
+}
+#faqs-textcontent-body{
+    margin-bottom: 2em;
+}
+#faqs-textcontent-paragraph{
+    color:#020047;
+    font-size: 0.9em;
+    font-family:metropolis-light;
+    text-align: justify;
+}
+#faqs-inquiry-paragraph{
+    font-family:metropolis-bold;
+}
+#btn-inquire-shortcut, #btn-faqs-shortcut{
+    text-decoration: none;
+    color:#020047;
+    border-radius:20px;
+    border:none;
+    padding:0.9em 0 0.9em;
+}
+#btn-inquire-shortcut:hover{
+    color: #F2EC26;
+    font-family: metropolis-semi;
+}
+
+/* ACCORDION ITEM */
+.item-body{
+    padding:1.3em;
+}
+.accordion-button {
+    /* Glass morphism base styles */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    font-family: metropolis-reg;
+    font-size:0.8rem !important;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px !important;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #020047; /* Dark blue background */
+    color: #F2EC26; /* Yellow text */
+    box-shadow: 0 2px 10px rgba(2, 0, 71, 0.2);
+}
+/* Accordion icon (arrow) color */
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23020047'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F2EC26'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Accordion item body */
+.accordion-collapse {
+    transition: height 0.3s ease;
+}
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+.accordion-button:not(.collapsed):hover {
+    background-color: #020047;
+    border-bottom: 5px solid #F2EC26;
+    color:#F2EC26;
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #e9ecef;
+    border-top: none;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+.accordion-button-collapse:focus{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); 
+}
+#step-desc{
+    font-size: 0.8rem;
+    font-family:metropolis-reg;
+    text-align: justify;
+}
+#step-head{
+    font-size: 1.6rem;
+    font-family:metropolis-semi;
+}
+
+/* SECTION 2:CONTACT INFO */
+#form-bottom{
+    display:flex;
+    flex-direction:row;
+    margin:3em 0 1em;
+    gap:1em;
+    width:93%;
+}
+#btn-faqs-shortcut{
+    flex:1;
+}
+#btn-submit{
+    flex:1;
+    align-items: end;
+    border-radius: 25px;
+    border:none;
+    background-color: #F2EC26;
+    color:#020047;
+}
+#inquiry-form-header,#inquiry-form-subheader{
+    color:#020047
+}
+#inquiry-form-header{
+    padding-top:1em;
+    font-size: 3rem;
+    font-family:metropolis-bold;
+    color:#020047;
+    letter-spacing: -0.03em;
+}
+#inquiry-form-subheader{
+    font-size: 1rem;
+    margin-bottom: 2em;
+    font-family:metropolis-reg;
+}
+#inquiry-fullname {
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+    width:90%;
+}
+.input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width:90%;
+}
+#subject-item,label{
+    font-size:0.9rem;
+    font-family: metropolis-reg;
+}
+label{
+    margin-top:1em;
+    font-family: metropolis-reg;
+    font-size: 0.8rem;
+}
+#fname-input,
+#lname-input,
+#email-input,
+#message-input,
+#subject-type
+{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.08) !important;
+
+    background: rgba(255, 255, 255, 0.166);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 8px !important;
+    padding:1em 0.8em 1em;
+    font-size:0.9rem;
+    font-family: metropolis-reg;
+    background-color: #b4bfe51b;
+    border:none;
+}   
+#message-input{
+    height:16vh;
+}
+
+#subject-type{
+    width:90%;
+    border-radius: 10px;
+}
+#fname-input:focus,
+#lname-input:focus,
+#email-input:focus,
+#message-input:focus
+{
+    border-bottom:3px solid #020047;
+}
+
+#contact-desc{
+    font-family: metropolis-semi;
+    font-size: 0.9rem;
+    margin-bottom: 2em;
+}
+#contact-textcontent{
+    margin-left:1em;
+    margin-bottom: 1.4em;
+}
+#contact-info{
+    font-size: 0.9rem;
+    font-family: metropolis-reg;
+    text-decoration: none;
+    color:#020047;
+}
+#contact-item{
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    width:fit-content;
+}
+#contact-header{
+    font-size:1rem;
+    font-family:metropolis-bold;
+}
+
+#chair-overlay{
+    position: absolute;
+    right:0;
+    left:79%;
+    top:80%;
+}
+
+#contact-content{
+    background-color: #23abe641;
+    color:#020047;
+    border-radius: 35px;
+    padding-top:8em;
+    padding-bottom:8em;
+    padding-left:5em;
+    padding-right:5em;
+}
+
+@media only screen and (min-height: 590px) and (max-width: 1000px) {
+    #chair-overlay{
+        display:none;
+    }
+    
+    #faqs-inner-container,
+    #inquiry-inner-container {
+        width: 100%;
+        margin-top: 5em;
+        flex-direction: column;
+        padding: 1em !important;
+        height: fit-content;
+    }
+    #location-content{
+        gap:1em;
+        padding:4em 1em 4em;
+    }
+    #location-postal,#location-campus{
+        text-align: center;
+        color:#020047;
+        width: 100%;
+        height: 9vh;
+    }
+    #location-campus-header,
+    #location-postal-header{
+        font-size:0.8rem;
+    }
+    #location-campus-info,
+    #location-postal-info{
+        font-size:0.5rem;
+        width:100;
+        padding:0;
+        margin:0;
+    }
+
+    #form-content{
+        align-items: center;
+        justify-content: center;
+        flex:0;
+        padding: 1em;
+        margin:0 auto;
+    }
+    .input-container{
+        margin-left:1em;
+    }
+
+    #inquiry-form-header,#inquiry-form-subheader{
+        color:#020047
+    }
+    #inquiry-form-header,#faqs-questions-header,#faqs-questions-subheader{
+        padding-top:0em;
+        font-size: 2.1rem;
+        line-height: 0.9em;
+    }
+    #inquiry-form-subheader{
+        font-size: 0.8rem;
+        margin-bottom: 1.3em;
+    }
+    #subject-item,label{
+        font-size:0.7rem;
+    }
+    label{
+        margin-top:1.5em;
+        font-size: 0.8rem;
+        font-family: metropolis-bold;
+    }
+    #subject-type{
+        width:90%;
+        margin-left:1em;
+    }
+
+    #faqs-questions-subheader{
+        color:#818181;
+        font-family:metropolis-semi;
+        margin-top: 0.25em;
+    }
+
+   #form-bottom{
+    width:93%;
+   }
+
+   #contact-content{
+    margin:0;
+    padding:1em;
+}
+    #contact-info{
+        font-size: 0.5rem;
+        font-family: metropolis-reg;
+    }
+    /* ACCORDION ITEM */
+    .item-body{
+        padding:0;
+    }
+
+    .accordion-body {
+        padding: 0;
+        margin: 0;
+    }
+    #faqs-accordion-container{
+        padding: 1em;
+        margin: 0;
+    }
+    #faqs-textcontent-container{
+        width: 100%;
+        margin:0;
+        padding:1.4em;
+    }
+
+    #contact-content{
+        background-color: #23abe641;
+        color:#020047;
+        border-radius: 35px;
+        padding-top:6em;
+        padding-bottom:6em;
+        padding-left:5em;
+    }
+    
+
+}
+
