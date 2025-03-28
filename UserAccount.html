@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ready, Seat, Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="useraccount.css">
+
+</head>
+
+<body>
+    <section class="vh-100" id="useraccount-section">
+        <div id="container1"> <!--section sa left side -->
+            <div id="first-layer">
+                <div id="first-layer-container">
+                    <div id="title-container">
+                        <h1 id="ua-header">Account<br>Control</h1>
+                    </div>
+                    <div id="subheader-container">
+                        <div id="subheader-inner">
+                            <h1 id="ua-active">900</h1>
+                            <h3 id="ua-account">Active Accounts</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="second-layer">
+                <div id="au-search-container">
+                    <input type="text" id="au-search" placeholder="Search...">
+                </div>
+            </div>
+
+            <div id="third-layer">
+                <div id="third-layer-container">
+                    <div id="au-list-dropdown">
+                        <div id="ua-dropdown-container-header">
+                            <h1 id="ua-dropdown-header">Participants List</h1>
+                        </div>
+                        <!-- Dropdown List Type -->
+                        <div class="dropdown">
+                            <select name="list-type" id="dropdown-type">
+                                <option value="Participants List" class="form-control form-control-lg"id="dropdown-item-participants">Participants List
+                                </option>
+                                <option value="Block List" class="form-control form-control-lg" id="dropdown-item-block">
+                                    Block List
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- para magbago 'yung text  -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Get the dropdown and header elements
+                        const dropdown = document.getElementById('dropdown-type');
+                        const header = document.getElementById('ua-dropdown-header');
+
+                        // Add event listener for changes to the dropdown
+                        dropdown.addEventListener('change', function () {
+                            // Update the header text with the selected option's text
+                            header.textContent = this.value;
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="Fourth-layer">
+
+                <div id="fourth-layer-container">
+                    <div class="attendee-list-container1">
+                        <div class="attendee-box1">
+                            <div class="attendee-header">
+                                <span class="header-name">Name</span>
+                                <span class="header-type">Student</span>
+                            </div>
+                            <div class="attendee-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">johndoe@example.com</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Student Number:</span>
+                                    <span class="detail-value">2023-12345</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Number:</span>
+                                    <span class="detail-value">09123456789</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attendee-box1">
+                            <div class="attendee-header">
+                                <span class="header-name">Name</span>
+                                <span class="header-type">Student</span>
+                            </div>
+                            <div class="attendee-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">johndoe@example.com</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Student Number:</span>
+                                    <span class="detail-value">2023-12345</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Number:</span>
+                                    <span class="detail-value">09123456789</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="attendee-box1">
+                            <div class="attendee-header">
+                                <span class="header-name">Name</span>
+                                <span class="header-type">Student</span>
+                            </div>
+                            <div class="attendee-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">johndoe@example.com</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Student Number:</span>
+                                    <span class="detail-value">2023-12345</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Number:</span>
+                                    <span class="detail-value">09123456789</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div id="container2">
+            <div id="first-layer2">
+                <div id="first-layer-container2">
+                    <div id="buttons-container2">
+                        <button class="control-button active" id="attended-button">Attended</button>
+                        <button class="control-button" id="reserved-button">Reserved</button>
+                        <button class="control-button" id="missed-button">Missed</button>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const buttons = document.querySelectorAll('.control-button');
+
+                            // Set attended button as active by default
+                            document.getElementById('attended-button').classList.add('active');
+
+                            buttons.forEach(button => {
+                                button.addEventListener('click', function () {
+                                    // Remove active class from all buttons
+                                    buttons.forEach(btn => {
+                                        btn.classList.remove('active');
+                                    });
+                                    // Add active class to clicked button
+                                    this.classList.add('active');
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+            <div id="second-layer2">
+                <div id="second-layer-container2">
+                    <div id="attendee-list-container2">
+                        <div class="attendee-box2">
+                            <div id="attendee-box2-container">
+                                <div id="attendee-header-container2"> 
+                                    <div class="attendee-header2">
+                                        <span class="header-name-header">Attendee</span>
+                                        <span class="header-name">Balona, Adam</span>
+                                    </div>
+                                    <div class="attendee-type-container"> 
+                                        <img src="images/ua-attendee-type.svg" alt="Attendee Type" class="attendee-type-image">
+                                    </div>
+                                </div>
+
+                                <div class="attendee-top-header2">
+                                    <span class="event-place-header">Event at</span>
+                                </div>
+                                <div class="attendee-middle-header2">
+                                    <span class="event-name">Ikabod</span>
+                                    <span class="event-place">UMak Auditorium</span>
+                                </div>
+                                <div id="au-reservation-details">
+                                    <div class="attendee-seat-header2">
+                                        <span class="au-seat-number-header">Seat Number</span>
+                                        <span class="au-seat-number">R15</span>
+                                    </div>
+
+                                    <div class="attendee-reserved-header2">
+                                        <span class="au-reserved-header">Reserved Date And Time</span>
+                                        <span class="au-reserved-date">October 5, 2025</span>
+                                        <span class="au-reserved-time">10:10 AM</span>
+                                    </div>
+                                    <div class="attendee-attended-header2">
+                                        <span class="au-attended-header">Attended Date And Time</span>
+                                        <span class="au-attended-date">October 5, 2025</span>
+                                        <span class="au-attended-time">10:10 AM</span>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="attendee-box2">
+                            <div id="attendee-box2-container">
+                                <div id="attendee-header-container2">
+                                    <div class="attendee-header2">
+                                        <span class="header-name-header">Attendee</span>
+                                        <span class="header-name">Balona, Adam</span>
+                                    </div>
+                                    <div class="attendee-type-container">
+                                        <img src="images/ua-attendee-type.svg" alt="Attendee Type" class="attendee-type-image">
+                                    </div>
+                                </div>
+                        
+                                <div class="attendee-top-header2">
+                                    <span class="event-place-header">Event at</span>
+                                </div>
+                                <div class="attendee-middle-header2">
+                                    <span class="event-name">Ikabod</span>
+                                    <span class="event-place">UMak Auditorium</span>
+                                </div>
+                                <div id="au-reservation-details">
+                                    <div class="attendee-seat-header2">
+                                        <span class="au-seat-number-header">Seat Number</span>
+                                        <span class="au-seat-number">R15</span>
+                                    </div>
+                        
+                                    <div class="attendee-reserved-header2">
+                                        <span class="au-reserved-header">Reserved Date And Time</span>
+                                        <span class="au-reserved-date">October 5, 2025</span>
+                                        <span class="au-reserved-time">10:10 AM</span>
+                                    </div>
+                                    <div class="attendee-attended-header2">
+                                        <span class="au-attended-header">Attended Date And Time</span>
+                                        <span class="au-attended-date">October 5, 2025</span>
+                                        <span class="au-attended-time">10:10 AM</span>
+                                    </div>
+                        
+                        
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                        <div class="attendee-box2">
+                            <div id="attendee-box2-container">
+                                <div id="attendee-header-container2">
+                                    <div class="attendee-header2">
+                                        <span class="header-name-header">Attendee</span>
+                                        <span class="header-name">Balona, Adam</span>
+                                    </div>
+                                    <div class="attendee-type-container">
+                                        <img src="images/ua-attendee-type.svg" alt="Attendee Type" class="attendee-type-image">
+                                    </div>
+                                </div>
+                        
+                                <div class="attendee-top-header2">
+                                    <span class="event-place-header">Event at</span>
+                                </div>
+                                <div class="attendee-middle-header2">
+                                    <span class="event-name">Ikabod</span>
+                                    <span class="event-place">UMak Auditorium</span>
+                                </div>
+                                <div id="au-reservation-details">
+                                    <div class="attendee-seat-header2">
+                                        <span class="au-seat-number-header">Seat Number</span>
+                                        <span class="au-seat-number">R15</span>
+                                    </div>
+                        
+                                    <div class="attendee-reserved-header2">
+                                        <span class="au-reserved-header">Reserved Date And Time</span>
+                                        <span class="au-reserved-date">October 5, 2025</span>
+                                        <span class="au-reserved-time">10:10 AM</span>
+                                    </div>
+                                    <div class="attendee-attended-header2">
+                                        <span class="au-attended-header">Attended Date And Time</span>
+                                        <span class="au-attended-date">October 5, 2025</span>
+                                        <span class="au-attended-time">10:10 AM</span>
+                                    </div>
+                        
+                        
+                                </div>
+                        
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
