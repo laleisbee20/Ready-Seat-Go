@@ -1,0 +1,493 @@
+@font-face {
+    font-family: metropolis-blackitalic;
+    src: url(fonts/metropolis.black-italic.otf);
+}
+@font-face {
+    font-family: metropolis-black;
+    src: url(fonts/metropolis.black.otf);
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(fonts/metropolis.light.otf);
+}
+@font-face {
+    font-family: metropolis-extrabold;
+    src: url(fonts/metropolis.extra-bold.otf);
+}
+@font-face {
+    font-family: metropolis-reg;
+    src: url(fonts/metropolis.regular.otf);
+}
+@font-face {
+    font-family: metropolis-semi;
+    src: url(fonts/metropolis.semi-bold.otf);
+}
+@font-face {
+    font-family: metropolis-semiitalic;
+    src: url(fonts/metropolis.semi-bold-italic.otf);
+}
+
+@font-face {
+    font-family: metropolis-regitalic;
+    src: url(fonts/metropolis.regular-italic.otf);
+}
+#dashboard-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width:100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-image:url(images/dashboard-bg.svg);
+}
+#dashboard-textcontent,
+#dashboard-primedetails,
+#dashboard-terdetails
+{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+#facilitator-container,
+#dashboard-secdetails,
+#seats-desc-inner,
+#seats-desc-outer
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#facilitator-container,
+#seats-desc-inner,
+#seats-desc-outer{
+    gap:0.3em;
+}
+#dashboard-textcontent,
+#dashboard-textcontent-p2
+{
+    width: 100%;
+    flex: 1;
+}
+#dashboard-textcontent-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: metropolis-reg;
+    margin:0 auto;
+    width:100%;
+    padding:0 7em;
+}
+#dashboard-textcontent{
+    color: aliceblue;
+}
+
+/* FIRST LAYER START */
+#dashboard-primedetails{
+    font-family: metropolis-bold;
+    width:100%;    
+}
+#facilitator-value,
+#facilitator-desc{
+    font-family: metropolis-reg;
+    font-size:1rem;
+}
+#event-venue-desc{
+    font-family: metropolis-bold;
+    font-size:1rem;
+}
+#event-title-desc{
+    font-size: 3.5em;
+    letter-spacing: 1.3;
+    font-family: metropolis-bold;
+}
+/* FIRST LAYER END */
+
+/* SECOND LAYER START */
+#dashboard-secdetails{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+}
+#date-container,
+#time-container,
+#price-container{
+    padding:2em 0 2em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+#date-label,
+#time-label,
+#price-label,
+#seats-label{
+    font-family: metropolis-bold;
+    font-size:0.8rem;
+}
+#date-desc,
+#time-desc,
+#price-desc,
+#seats-value{
+    font-family: metropolis-reg;
+    font-size:0.8rem;
+    letter-spacing:1;
+}
+/* SECOND LAYER END */
+/* THIRD LAYER START */
+#dashboard-terdetails{
+    width:100%;
+}
+#event-desc{
+    font-family: metropolis-light;
+    font-size:0.9rem;
+    color: aliceblue;
+    letter-spacing: 1.2;
+    text-align: justify;
+}
+#seats-desc-outer,
+#dashboard-seclayer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+}
+#seats-desc-inner {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#btn-reserve-seat {
+    border-radius: 15px;
+    border: none;
+    background-color: #F2EC26;
+    color: #020047;
+    padding: 13px 40px; 
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-family: metropolis-reg;
+    transition: all 0.3s ease-out;
+}
+#btn-reserve-seat:hover {
+    background-color: #0066ff;
+    color: aliceblue;
+    transform: scale(1.02);
+}
+/* THIRD LAYER END */
+#dashboard-textcontent{
+    width:100%;
+    padding:5em;
+}
+/* SECOND SECTION LAYER START */
+#dashboard-textcontent-p2{  
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+#dashboard-searchbar {
+    width: 100%;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;    
+    margin: 0 auto;
+    padding: 10px 0;       
+}
+
+#searchbar-input {
+    width: 95%;
+    padding: 1em 1.5em;    
+    border: none;
+    background-color: rgba(240, 248, 255, 0.164);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: metropolis-reg;
+    transition: all 0.3s ease-out;
+    outline: none;         
+}
+#searchbar-input:hover{
+    border:0.5px solid #F2EC26;
+}
+#searchbar-input:focus{
+    border-bottom:1px solid #F2EC26;
+}
+#dashboard-seclayer{
+    margin:0;
+    margin-top: 1.5em;
+    padding:0 2em 0;
+}
+#dashboard-events-label{
+    font-size: 0.9rem;
+    font-family: metropolis-bold;
+    color:aliceblue;
+}
+/* Dropdown Container */
+#dropdown-type {
+    font-family: 'metropolis-reg', sans-serif;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 250px;
+    padding: 0.8em 2.5em 0.8em 1em;
+    border: 1px solid rgba(240, 248, 255, 0.3);
+    border-radius: 25px;
+    background-color: rgba(240, 248, 255, 0.1);
+    color: aliceblue;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='aliceblue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1em center;
+    background-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover State */
+#dropdown-type:hover {
+    background-color: rgba(240, 248, 255, 0.15);
+    border-color: rgba(242, 236, 38, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus State */
+#dropdown-type:focus {
+    border-color: #F2EC26;
+    background-color: rgba(240, 248, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(242, 236, 38, 0.2);
+}
+
+#dropdown-type option {
+    padding: 0.8em;
+    background: aliceblue;
+    color: #020047;
+    border:none;
+    font-size: 0.7rem;
+    font-family:metropolis-light;
+}
+
+/* Selected Option */
+#dropdown-type option:checked {
+    background-color: aliceblue;
+    color: #020047;
+}
+
+#dropdown-type:active {
+    transform: translateY(1px);
+}
+
+#dropdown-type:hover {
+    background-position: right 0.8em center;
+}
+
+/* SECOND SECTION LAYER END */
+
+#dashboard-container{
+    height: auto;
+    min-height: 100vh;
+    padding: 1.4rem;
+}
+
+.carousel-container {
+    width:100%;
+    max-width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px;
+    width:10em;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-link:hover {
+    color: #0066ff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.card-content {
+    padding: 1em;
+    position:absolute;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#card1{
+    background: 
+        linear-gradient(rgba(5, 0, 20, 0.5), rgba(0, 0, 0, 0.5)),
+        url(images/athleticonnect-eventposter.jpg);
+    background-size:cover;
+    background-position: center;
+}
+#card2{
+    background: 
+        linear-gradient(rgba(5, 0, 20, 0.5), rgba(0, 0, 0, 0.5)),
+        url(images/aitexh-eventposter.jpg);
+    background-size:cover;
+    background-position: center;
+}
+#card3{
+    background: 
+        linear-gradient(rgba(5, 0, 20, 0.5), rgba(0, 0, 0, 0.5)),
+        url(images/riseanywhere-eventposter.jpg);
+    background-size:cover;
+    background-position: center;
+}
+#card1::before,
+#card2::before,
+#card3::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+    width: auto !important; 
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5em;
+    font-size: 0.9em;
+    color: aliceblue;
+    display: -webkit-box;
+    text-align: start;
+    -webkit-line-clamp: 3; /* Changed from 4 to 3 lines */
+    -webkit-box-orient: vertical;
+    transition: color 0.3s ease;
+    font-family: metropolis-bold;
+    overflow: hidden;
+}
+
+.card:hover .card-content h3 {
+    color: #0066ff;
+}
+
+.card-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+}
+.date {
+    display: block;
+    color: aliceblue;
+    text-align: start;
+    font-family: metropolis-reg;
+    font-weight: 600;
+    font-size: 0.4em;
+    margin-bottom: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .date {
+    transform: translateX(5px);
+}
+
+button.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: rgba(255, 255, 255, 0.707); 
+    border-radius: 0;
+    text-align:start;
+    padding:0;
+    margin:0;
+}
+
+.btn {
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align:end;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.4em !important;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+
+.btn:hover {
+    color:#F2EC26 !important;
+    font-family: metropolis-semiitalic;
+}
+
+/* SWIPER ADJUSTMENTS FOR FIXED DIMENSIONS */
+.swiper {
+    padding: 0.8em 1em 1em !important;
+}
+.swiper-wrapper{
+    justify-content: center;
+    align-items: center;
+
+}
+/* SWIPER NAVIGATION BUTTONS FIX */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: #F2EC26 !important; /* Changed to your yellow color for better contrast */
+    background: #F2EC26 !important; /* Dark blue background */
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease;
+    z-index: 10 !important; /* Ensure buttons appear above other elements */
+    border: 1px solid rgba(242, 236, 38, 0.3);
+}
+
+/* Arrow icon styling */
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+}
+
+/* Hover effects */
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+    transform: scale(1.1) !important;
+    background: #0066ff !important;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Position adjustments */
+.swiper-button-next {
+    right: 10px !important;
+}
+
+.swiper-button-prev {
+    left: 10px !important;
+}
+
