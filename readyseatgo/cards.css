@@ -1,0 +1,665 @@
+:root {
+  --primary-color: #050562;
+  --secondary-color: #F2EC26;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --white: aliceblue;
+}
+@font-face {
+  font-family: metropolis-blackitalic;
+  src: url(fonts/metropolis.black-italic.otf);
+}
+@font-face {
+  font-family: metropolis-black;
+  src: url(fonts/metropolis.black.otf);
+}
+@font-face {
+  font-family: metropolis-bold;
+  src: url(fonts/metropolis.bold.otf);
+}
+@font-face {
+  font-family: metropolis-light;
+  src: url(fonts/metropolis.light.otf);
+}
+@font-face {
+  font-family: metropolis-extrabold;
+  src: url(fonts/metropolis.extra-bold.otf);
+}
+@font-face {
+  font-family: metropolis-reg;
+  src: url(fonts/metropolis.regular.otf);
+}
+@font-face {
+  font-family: metropolis-semi;
+  src: url(fonts/metropolis.semi-bold.otf);
+}
+
+@font-face {
+  font-family: metropolis-regitalic;
+  src: url(fonts/metropolis.regular-italic.otf);
+}
+
+body {
+  background-image: url(images/signup-bg.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+  font-family: metropolis-reg;
+  overflow-x: hidden; 
+}
+
+#progress-bar {
+  position: sticky;
+  top: 1em;
+  padding-bottom: 3em;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stepper-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  flex: 1;
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 130%;
+  top: 20px;
+  left: -90%;
+  z-index: 2;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.stepper-item.active .step-counter {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.stepper-item.completed .step-counter {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--secondary-color);
+}
+
+.stepper-item.completed::before {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.step-name {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+#signup-content-container {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+  flex-direction: row;
+  min-height: 90vh;
+  padding-left: 9em;
+  padding-right: 9em;
+}
+
+#signup-progress-section {
+  position: sticky;
+  padding-left:3em;
+  width: 600px;
+  padding-left: 8em;
+  background-color: transparent;
+  color:aliceblue;
+}
+/* Custom scrollbar styles */
+#signup-field-section::-webkit-scrollbar {
+  width: 8px; 
+}
+
+#signup-field-section::-webkit-scrollbar-thumb {
+  background-color: #F2EC26; 
+  border-radius: 10px; 
+  border: 2px solid #050562; 
+}
+
+#signup-field-section::-webkit-scrollbar-track {
+  display: none;
+}
+
+#signup-field-section::-webkit-scrollbar-button {
+  display: none; 
+}
+
+#signup-field-section {
+  overflow-y:scroll;
+  height: calc(90vh - 80px);
+  scroll-behavior: smooth;
+  padding:0;
+}
+#signup-field-container-p1,
+#signup-field-container-p2,
+#signup-field-container-p3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 550px;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+#section-desc,#email-input-desc{
+  color:aliceblue;
+  font-family:metropolis-light;
+  font-size: 0.9rem;
+  text-align: center;
+  width:80%;
+}
+#section-desc{
+  margin-bottom: 1.3em;
+}
+#email-input-desc{
+  font-family:metropolis-semi;
+}
+#section-desc2{
+  color:aliceblue;
+  font-family:metropolis-light;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+  margin-top:4em;
+
+}
+#send-layer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+#resend-code-all {
+  color: #fff;
+  font-family: metropolis-light;
+  font-size: 0.9rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#resend-text {
+  color: #F2EC26;
+  font-family: metropolis-semi;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-left: 0.3rem;
+  transition: color 0.2s;
+}
+
+#resend-text:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#timer-text {
+  color: #F2EC26;
+  font-size: 0.9rem;
+  font-family: metropolis-semi;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+#resend-text:hover{
+  color:#007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.form-content{
+  margin:0;
+  padding-left:10em;
+  padding-right:10em;
+  width:100%;
+}
+.section-title{
+  font-family: metropolis-semi;
+  font-size: 1.4rem;
+  letter-spacing: -0.2px;
+  text-align: center;
+  margin-bottom: 2em;
+  width: 100%;
+  color:aliceblue;
+}
+.form-section {
+  min-height: calc(90vh - 100px);
+  padding: 40px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.row-md-6{
+    position: relative;
+    width: 100%;
+}
+/* .active-section {
+  border-left: 4px solid var(--secondary-color);
+} */
+/* Label Styling */
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 1.5em;
+  transform: translateY(-50%);
+  color: #adb5bd;
+  font-size: 0.8rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Focused Input Field */
+.form-control.form-control-lg:active {
+  border-color: #F2EC26;
+}
+
+/* Floating Label Effect */
+.form-control.form-control-lg:focus + .form-label,
+.form-control.form-control-lg:not(:placeholder-shown) + .form-label,
+.form-label.active {
+  top: -0.09rem; /* Float the label above the input */
+  left: 1em;
+  font-size: 0.8rem;
+  color: aliceblue;
+  background-color: #050562;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+#firstname-input,
+#surname-input,
+#birthdate-input,
+#org-input,
+#username-input,
+#password-input,
+#confirm-password-input,
+#relationship-input,
+#email-input,
+#attendee-type,
+#sex-type{
+    background-color: transparent;
+    border: 1px solid rgba(240, 248, 255, 0.76);
+    border-radius: 10px;    
+    font-family: metropolis-light;
+    font-size: 0.8rem;
+    height:50px;  
+    width: 100%;
+    color: aliceblue;
+}
+
+#firstname-input:hover,
+#surname-input:hover,
+#birthdate-input:hover, 
+#org-input:hover,
+#relationship-input:hover,
+#email-input:hover,
+#confirm-password-input:hover,
+#password-input:hover,
+#username-input:hover,
+#attendee-type:hover,
+#sex-type:hover {
+        border:1px solid #F2EC26; 
+    }
+#firstname-input::placeholder,
+#surname-input::placeholder,
+#birthdate-input::placeholder, 
+#org-input::placeholder,
+#relationship-input::placeholder,
+#email-input::placeholder,
+#confirm-password-input::placeholder,
+#password-input::placeholder,
+#username-input::placeholder,
+#attendee-type::placeholder,
+#sex-type::placeholder {
+      color:rgba(240, 248, 255, 0.262);
+      font-family:metropolis-light;
+}
+
+.form-control::placeholder {
+  opacity: 0; /* Hide by default */
+  transition: opacity 0.2s ease;
+}
+
+.form-control:focus::placeholder {
+  opacity: 1; /* Show on focus */
+}
+
+#birthdate-input{
+  margin-top: 10px;
+}
+#attendee-type option {
+  background-color: #050562; /* Your desired dropdown background color */
+  color: aliceblue;
+}
+#name-layer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+#affiliate-layer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-outline.mb-3 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Add these styles to your existing CSS */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  height: 50px;
+  padding: 1rem 1rem 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label,
+.form-control:valid + label,
+.form-control.active + label {
+  top: 10px;
+  left: 1rem;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  padding: 0 5px;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #6c757d;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.verification-code {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.code-input {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 10px 30px;
+}
+
+.accordion-button {
+  background-color: transparent; 
+  color: aliceblue;
+  font-family: metropolis-semi;
+  font-size: 0.9rem;
+  width: 100%;
+  border: none; 
+  box-shadow: none; 
+}
+.accordion-item .accordion-button {
+  border: none; 
+  box-shadow: none; 
+}
+
+.stepper-item.completed + .stepper-item::before {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.stepper-item.completed-line::before {
+  border-bottom: 2px solid var(--secondary-color) !important;
+}
+
+.accordion-button {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important; 
+  color:rgba(240, 248, 255, 0.321) !important;
+  padding: 1rem; 
+}
+
+/* Remove bottom border when active */
+.accordion-button:not(.collapsed) {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Customize the accordion body */
+.item-body {
+  color:aliceblue;
+  padding: 1rem;
+  margin:1em 2em 1em;
+  border-top: none;
+}
+#step-no{
+  font-family:metropolis-semi;
+  font-size:0.8rem;
+}
+#step-head{
+  font-family:metropolis-bold;
+  font-size:3rem;
+  letter-spacing: -0.1rem;
+}
+#step-desc{
+  font-family:metropolis-light;
+  font-size:0.8rem;
+}
+#step-head-sec{
+  font-family:metropolis-reg;
+  font-size:3rem;
+  letter-spacing: -0.1rem;
+}
+#step-head-sec-line{
+  font-family:metropolis-reg;
+  padding-left:0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code-input{
+  width:50px;
+  height: 65px;
+  border-radius: 10px;
+  border:0.5px solid #adb5bd; 
+  background-color: transparent;
+  font-family: metropolis-reg;
+  font-size: 1.1rem;
+  text-align: center;
+  color: aliceblue;
+}
+.code-input:hover, .code-input:focus{
+  border:1px solid #F2EC26; 
+}
+
+/* Terms and Conditions */
+#btn-terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:5em;
+  width: 100%;
+}
+
+#lbl-terms{
+  color:rgba(240, 248, 255, 0.477);
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: metropolis-light;
+}
+
+#check-terms{
+  background-color: transparent;
+  border: 0.5px solid rgba(240, 248, 255, 0.525);
+  font-size: 0.8rem;
+}
+
+#terms-link{
+  color: #adb5bd;
+  text-decoration: none;
+}
+#createacc-layer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#btn-createacc,#verify-email{
+  background-color: #F2EC26;
+  border-radius: 25px;
+  border: none;
+  width: 50%;
+  height: 6em;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 0.5rem;
+  font-family: metropolis-reg;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#verify-email{
+  width: 100%;
+}
+.btn-createacc:hover {
+  background-color: #F2EC26;
+  font-family: metropolis-bold;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px #f2eb2663;
+}
+#process-icon-container{
+  position: fixed;
+  top: 20em;
+  left: 23em;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Behind content */
+  opacity: 0.80; /* Adjust transparency */
+  transition: opacity 0.5s ease, background-image 0.5s ease;
+
+}
+#process-icon{
+  width: 30em;
+  height: 30em;
+}
+
+@media (max-width: 992px) {
+  #signup-content-container {
+      flex-direction: column;
+  }
+  
+  #signup-progress-section {
+      width: 100%;
+  }
+  
+  .stepper-wrapper {
+      gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-section {
+      padding: 20px 10px;
+  }
+  
+  .verification-code {
+      gap: 5px;
+  }
+  #signup-progress-section {
+    display: none;
+}
+
+  .code-input {
+      width: 40px;
+      height: 50px;
+  }
+}
